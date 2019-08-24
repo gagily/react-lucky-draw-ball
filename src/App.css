@@ -112,7 +112,9 @@ h2 {
   border: 3px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  outline: none;
+  outline: none; 
+  width: 100%;
+
 }
 
 .inputBet:focus {
@@ -159,13 +161,13 @@ button:visited {
   display: inline-block;
 }
 
-ol{
+ol {
   list-style-type: none;
   counter-reset: elementcounter;
   padding-left: 0;
 }
 
-li:before{
+li:before {
   content: "Tiket " counter(elementcounter) ": ";
   counter-increment:elementcounter;
   font-weight: bold;
@@ -213,16 +215,16 @@ li:before{
 }
 
 @media only screen and (max-width: 468px) {
-  .height50 {
-  height: 80px;
-  }
 
   .numbersOnTicket {
-    margin: 0px;
+    margin: 0.5px;
   }
 
   .flexBasis {
     flex-basis: unset;
+    font-size: 0.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .pickNumber {
@@ -235,34 +237,56 @@ li:before{
     height: 30px;
     margin: 2px;
   }
+
 }
 
 @media only screen and (max-width: 492px) and (min-width: 469px){
-  .height50 {
-  height: 120px;
-  }
 
   .numbersOnTicket {
-    margin: 0px;
+    margin: 1px;
   }
 
   .number {
     margin: 2px;
   }
+
+  .flexBasis {
+    flex-basis: unset;
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 493px) {
-  .height50 {
-  height: 150px;
-  } 
 
   .number {
     margin: 3px;
   }
+  .flexBasis {
+    flex-basis: unset;
+    font-size: 0.8rem;
+  }
 }
 
-@media only screen and (max-width: 1190px) and (min-width: 768px) {
-  .height50 {
-  height: 80px;
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+
+  .pickNumber {
+    padding: 5px;
+  }
+
+  .number {
+    margin: 3px;
+  }
+
+  .flexBasis {
+    font-size: 0.6rem;
+  }
+
+  .col {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .numbersOnTicket {
+    margin: 1px;
   }
 }
