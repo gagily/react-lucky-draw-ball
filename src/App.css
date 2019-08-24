@@ -211,3 +211,58 @@ li:before{
 .notifications {
   padding: 10px;
 }
+
+@media only screen and (max-width: 468px) {
+  .height50 {
+  height: 80px;
+  }
+
+  .numbersOnTicket {
+    margin: 0px;
+  }
+
+  .flexBasis {
+    flex-basis: unset;
+  }
+
+  .pickNumber {
+    padding: 0px;
+  }
+
+  .number {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 492px) and (min-width: 469px){
+  .height50 {
+  height: 120px;
+  }
+
+  .numbersOnTicket {
+    margin: 0px;
+  }
+
+  .number {
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 493px) {
+  .height50 {
+  height: 150px;
+  } 
+
+  .number {
+    margin: 3px;
+  }
+}
+
+@media only screen and (max-width: 1190px) and (min-width: 768px) {
+  .height50 {
+  height: 80px;
+  }
+}

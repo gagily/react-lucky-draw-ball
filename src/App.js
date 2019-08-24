@@ -281,7 +281,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col flexBasis">
             <div className="tickets section-4">
             <ol>{listTickets}</ol>
             </div>
