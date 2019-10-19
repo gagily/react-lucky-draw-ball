@@ -22,7 +22,8 @@ class App extends React.Component {
       winingText: [],
       emptyTicket: false,
       noBets: false,
-      startNew: false
+      startNew: false,
+      isButtonDisabled: false
     }
 
     this.makeTicket=this.makeTicket.bind(this);
@@ -94,6 +95,9 @@ class App extends React.Component {
   }
 
   drawing() {
+    this.setState({
+      isButtonDisabled: true
+    });
     this.interval = setInterval(() => {  
       if (this.state.randomArray.length < 12) {
         let newNumber= Math.floor(1 + Math.random() * (30 - 1));
@@ -206,7 +210,8 @@ class App extends React.Component {
 	    winingText: [],
 	    emptyTicket: false,
 	    noBets: false,
-	    startNew: false
+	    startNew: false,
+      isButtonDisabled: false
 	  	})
   	}, 10000);	
   }
@@ -307,7 +312,7 @@ class App extends React.Component {
            </div>
             <div className="section-2">
 	            <button type="button" className="btn btn-dark" id={this.state.numberTicket === 5 ? 'no' : ''} onClick={this.addTicket}  >Add ticket</button>
-	            <button type="button" className="btn btn-dark play" id={this.state.numberTicket === 5 ? 'yes' : ''} onClick={this.drawing}>Play</button>
+	            <button type="button" className="btn btn-dark play" id={this.state.numberTicket === 5 ? 'yes' : ''} onClick={this.drawing} disabled={this.state.isButtonDisabled}>Play</button>
             </div>
 
             <div className="notifications">
